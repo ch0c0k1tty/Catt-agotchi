@@ -1,5 +1,5 @@
 idf_component_register(
-    SRCS "display.c"
+    SRCS "display.c" "sprites.c"
     INCLUDE_DIRS "."
     REQUIRES
         st7789
