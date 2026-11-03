@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "esp_timer.h"
 #include "happy_catt.h"
+#include "sad_catt.h"
 
 #include "../catt/catt.h"
 #include "../st7789/st7789.h"
@@ -33,11 +34,11 @@ typedef struct
     size_t           count;
 } animation_t;
 
-// TODO: sad (4 frames) and R.I.P. (1 frame) art doesn't exist yet, so they borrow the happy frames
+// TODO: R.I.P. (1 frame) art doesn't exist yet, so it borrows the happy frames
 static const animation_t animations[] =
 {
     [CATT_SATISFIED  ] = { happy_catt_frames , HAPPY_CATT_FRAME_COUNT },
-    [CATT_UNSATISFIED] = { happy_catt_frames , HAPPY_CATT_FRAME_COUNT },
+    [CATT_UNSATISFIED] = { sad_catt_frames   , SAD_CATT_FRAME_COUNT   },
     [CATT_DEAD       ] = { happy_catt_frames , HAPPY_CATT_FRAME_COUNT },
 };
 
