@@ -1,2 +1,5 @@
 build/
 .idea/
+.venv/
+.vscode/
+sdkconfig.old
